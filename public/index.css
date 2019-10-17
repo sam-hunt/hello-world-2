@@ -1,5 +1,5 @@
 :root {
-    --bg-color: #222;
+    --bg-color: #151515;
     --primary-color: #BBBBBF;
     --accent-color: #CB9EFF;
     --icon-size: 28px;
@@ -43,7 +43,7 @@ a:hover {
 
 img.portrait {
     border-radius: 50%;
-    border: 10px solid var(--primary-color);
+    border: 10px solid var(--accent-color);
     width: 300px;
     height: 300px;
 }
