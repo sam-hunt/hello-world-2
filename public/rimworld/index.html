@@ -20,7 +20,7 @@
             zoom: 3,
         });
 
-        var tileLayer = L.tileLayer('http://localhost:8000/rimworld/tiles/{z}/{x}/{y}.png', {
+        var tileLayer = L.tileLayer('./tiles/{z}/{x}/{y}.png', {
             maxZoom: 6,
         }).addTo(map);
 
