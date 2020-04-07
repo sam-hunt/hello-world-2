@@ -48,23 +48,22 @@ img.portrait {
     height: 300px;
 }
 
-svg {
+/* .links { } */
+.links .icon {
+    -webkit-transition: fill 0.2s ease-out;
+    -moz-transition: fill 0.2s ease-out;
+    transition: fill 0.2s ease-out;
+    fill: var(--primary-color);
     height: var(--icon-size);
     width: var(--icon-size);
 }
 
-.link {
-    -webkit-transition: fill 0.2s ease-out;
-    -moz-transition: fill 0.2s ease-out;
-    transition: fill 0.2s ease-out;
-}
-
-svg {
-    fill: var(--primary-color);
-}
-
-svg:hover {
+/* svg:hover {
     fill: var(--accent-color);
+} */
+
+.links img:hover, .links svg:hover {
+    filter: sepia(100%) saturate(200%) brightness(80%) hue-rotate(220deg);
 }
 
 @media (min-width: 840px) {
@@ -98,7 +97,6 @@ svg:hover {
 }
 
 #mapid { 
-    /* width: 1440px; height: 900px; */
     width: auto; height: 100%;
     background-color:rgba(255,0,0,0.0);
 }
