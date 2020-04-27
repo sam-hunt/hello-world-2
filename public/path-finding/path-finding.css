@@ -1,0 +1,102 @@
+body {
+    display: grid;
+    grid-template: 1fr / 1fr 2fr;
+}
+
+h1 {
+    font-size: 36pt;
+    text-align: center;
+    width: 100%;
+    display: inline-block;
+    padding-bottom: 20px;
+}
+
+h2 {
+    font-size: 28pt;
+    margin: 0 0 15px 15px;
+}
+
+p {
+    margin: 0;
+}
+
+section {
+    padding: 20px;
+    margin-bottom: 10px;;
+}
+
+#controls {
+    padding: 20px;
+}
+
+label {
+    font-size: 16pt;
+    display: inline-block;
+}
+
+input {
+    display: inline-block;
+    color: whitesmoke;
+    color: var(--accent-color);
+    background-color: inherit;
+    font-family: inherit;
+    font-size: 14pt;
+    margin: 5px;
+}
+input[type="button"]:disabled {
+    color: #777777;
+}
+
+section#solver input {
+    margin-left: 20px;
+}
+
+#create-tiles-button {
+    float: right;
+    margin-right: 10%;;
+}
+
+.bordered {
+    border-width: 1px;
+    border-radius: 10px;
+    border-style: groove;
+    border-color: whitesmoke;
+}
+
+#tilemap-root {
+    display: grid;
+    padding: 10px;
+}
+
+.tile {
+    border-width: 1px;
+    border-style: dotted;
+}
+
+.tile:hover {
+    border-width: 1px;
+    border-style: solid;
+}
+
+.impassable {
+    border-color: var(--bg-color);
+    background-color: var(--primary-color);
+}
+
+.passable {
+    border-color: var(--primary-color);
+    background-color: var(--bg-color);
+}
+
+.searched {
+    background-color: slateblue;
+}
+
+.path {
+    /* background-color: var(--accent-color); */
+    background-color: blue;
+}
+
+#algorithm-status-p {
+    color: var(--accent-color);
+}

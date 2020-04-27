@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Sam Hunt Dev</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='../index.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='./path-finding.css'>
+    <meta name="Description" content="Path Finding Experiment">
+</head>
+<body>
+    <div id="controls" class="bordered">
+        <a id="back-button" href=".."><svg style="width:32px; height:32px; position: fixed" viewBox="0 0 24 24">
+            <path stroke="black" d="M19,7V11H5.83L9.41,7.41L8,6L2,12L8,18L9.41,16.58L5.83,13H21V7H19Z" stroke-width="3" />
+            <path stroke="white" d="M19,7V11H5.83L9.41,7.41L8,6L2,12L8,18L9.41,16.58L5.83,13H21V7H19Z" fill="white" />
+        </svg></a>
+        <h1>Pathfinding Test</h1>
+        <br/>
+        <section id="grid-setup" class="bordered">
+            <h2>Grid Setup</h2>
+            <label for="tilemap-x-input">Tilemap Size X:</label>
+            <input id="tilemap-x-input" type="number" value="30" min="3" max="100">
+            <br/>
+            <label for="tilemap-y-input">Tilemap Size Y:</label>
+            <input id="tilemap-y-input" type="number" value="40" min="3" max="100">
+            <hr/>
+            <input type=button id="reset-tiles-button" value="Reset Tiles"/>
+            <input type=button id="invert-all-tiles-button" value="Invert All Tiles"/>
+        </section>
+        <section id="solver" class="bordered">
+            <h2>Solver</h2>
+            <p>Algorithm:</p>
+            <input type="radio" id="algorithm-breadth-first-input" name="algorithm" value="breadth-first" checked="checked">
+            <label for="breadth-first">Breadth-First Search</label>
+            <br/>
+            <input type="radio" id="algorithm-dijkstra-input" name="algorithm" value="dijkstra" disabled="true">
+            <label for="dijkstra">Dijkstra's Algorithm</label>
+            <br/>
+            <input type="radio" id="algorithm-a-star-input" name="algorithm" value="a-star" disabled="true">
+            <label for="a-star">A*</label>
+            <br/>
+            <hr/>
+            <input type=button id="run-pathfinder-button" value="Run Pathfinder"/>
+            <hr/>
+            <p id="algorithm-status-p">Status: Waiting for user</p>
+        </section>
+    </div>
+    <div id="tilemap-root" class="bordered"></div>
+    <script type="text/javascript" src="./path-finding.js"></script>
+</body>
+</html>

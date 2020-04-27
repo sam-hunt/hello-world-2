@@ -12,15 +12,15 @@
     <script src="../lib/leaflet-1.6.0.js"></script>
 </head>
 <body>
-    <div id="mapid"></div>
-    <a href="..">
+    <div id="leaflet-map-root"></div>
+    <a id="back-button" href="..">
         <svg style="position:fixed; width:32px; height:32px; left:50px; top:20px; z-index:400;" viewBox="0 0 24 24">
             <path stroke="black" d="M19,7V11H5.83L9.41,7.41L8,6L2,12L8,18L9.41,16.58L5.83,13H21V7H19Z" stroke-width="3" />
             <path stroke="white" d="M19,7V11H5.83L9.41,7.41L8,6L2,12L8,18L9.41,16.58L5.83,13H21V7H19Z" fill="white" />
         </svg>
     </a>
     <script>
-        var map = L.map('mapid', {
+        var map = L.map('leaflet-map-root', {
             crs: L.CRS.Simple,
             minZoom: 1,
             zoom: 3,
