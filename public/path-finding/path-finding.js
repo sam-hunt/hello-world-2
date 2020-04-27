@@ -6,6 +6,7 @@ const resetTilesButton = document.getElementById('reset-tiles-button');
 const invertAllTilesButton = document.getElementById('invert-all-tiles-button');
 const runPathfinderButton = document.getElementById('run-pathfinder-button');
 const algorithmStatusP = document.getElementById('algorithm-status-p');
+const showProgressChk = document.getElementById('show-progress-input');
 
 let tileMapState, x, y, isMouseDown = false, tileDragMode = null, earlyStop = false;
 
@@ -130,7 +131,7 @@ runPathfinderButton.onclick = async () =>
         status = await algorithm.next();
         console.log(status)
         algorithmStatusP.innerHTML = `Status: ${status.value}`;
-        await pause(0);
+        if (showProgressChk.checked) await pause(0);
     } while (!status.done);
 }
 
