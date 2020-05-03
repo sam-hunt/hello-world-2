@@ -1,4 +1,7 @@
-const tileTypeListRoot = document.getElementById('tiletype-list-root')
+import breadthFirstSearch from './algorithms/breadth-first-search.js'
+import dijkstra from './algorithms/djikstra.js'
+import notImplemented from './algorithms/not-implemented.js'
+
 const tilemapRoot = document.getElementById('tilemap-root');
 const tilemapXInput = document.getElementById('tilemap-x-input');
 const tilemapYInput = document.getElementById('tilemap-y-input');
@@ -9,6 +12,8 @@ const algorithmStatusP = document.getElementById('algorithm-status-p');
 const showProgressChk = document.getElementById('show-progress-input');
 
 let tileMapState, x, y, isMouseDown = false, tileDragMode = null, earlyStop = false;
+
+const pause = async (ms) => new Promise(resolve => setTimeout(resolve, ms));
 
 const setPassabilityFromTile = (tile, passability) => {
     tileMapState[tile['data-x']][tile['data-y']] = passability;
@@ -25,7 +30,7 @@ document.body.onmouseup = () => {
     tileDragMode = null;
     return true;
 };
-handleTileMouseDown = (tile) => {
+const handleTileMouseDown = (tile) => {
     isMouseDown = true;
     if (tileDragMode === null)  {
         tileDragMode = Math.abs(tileMapState[tile['data-x']][tile['data-y']] - 1);
@@ -33,7 +38,7 @@ handleTileMouseDown = (tile) => {
     }
     return true;
 };
-handleTileMouseEnter = (tile) => {
+const handleTileMouseEnter = (tile) => {
     if (isMouseDown && tileDragMode !== null) {
         setPassabilityFromTile(tile, tileDragMode);
     }
@@ -103,14 +108,6 @@ invertAllTilesButton.onclick = () => {
     }
 };
 
-resizeMap(30, 40);
-
-
-// Path finding functionality
-
-const pause = async (ms) => new Promise(resolve => setTimeout(resolve, ms));
-function* notImplemented() { return 'Algorithm Not Implemented'; };
-
 runPathfinderButton.onclick = async () => 
 {
     earlyStop = false;
@@ -120,7 +117,7 @@ runPathfinderButton.onclick = async () =>
     // Get a generator function for the algorithm
     const algorithm = {
         'breadth-first': breadthFirstSearch,
-        'dijkstra': notImplemented,
+        'dijkstra': dijkstra,
         'a-star': notImplemented,
         notImplemented,
     }[document.querySelector('input[name="algorithm"]:checked').value || notImplemented]();
@@ -135,63 +132,4 @@ runPathfinderButton.onclick = async () =>
     } while (!status.done);
 }
 
-const buildNeighbourGraph = () => {
-    neighbourGraph = new Array(x);
-    for (let ix = 0; ix < x; ix++) {
-        neighbourGraph[ix] = new Array(y);
-        for (let iy = 0; iy < y; iy++) {
-            neighbourGraph[ix][iy] = getNeighbours(ix, iy);
-        }
-    }
-    return neighbourGraph;
-}
-
-// TODO: Account for diagonals needing pythagorian costs i.e.
-const getNeighbours = (posx, posy) => {
-    const neighbours = [];
-    for (let dx = -1; dx <= 1; dx++) {
-        for (let dy = -1; dy <= 1; dy++) {
-            if ((posx + dx >= 0 && posx + dx < x) && (posy + dy >= 0 && posy + dy < y) && tileMapState[posx + dx][posy + dy] > 0) {
-                // console.log({posx, posy, dx, dy, posxdx: posx + dx, posydy: posy + dy, tms: tileMapState[posx + dx][posy + dy]})
-                neighbours.push(`${posx + dx},${posy + dy}`);
-            }
-        }
-    }
-    return neighbours;
-}
-
-async function* breadthFirstSearch() {
-    yield 'Building neighbor graph...';
-    const neighbourGraph = buildNeighbourGraph();
-
-    yield 'Searching...';
-
-    const frontier = ['0,0'];
-    const cameFrom = new Map(Object.entries({'0,0': null}));
-
-    while (frontier.length) {
-        if (earlyStop) return 'Aborted by user';
-        let currentPosStr = frontier.shift();
-        const [currentX, currentY] = currentPosStr.split(',').map(s => parseInt(s, 10));
-        document.getElementById(`tile-x${currentX}-y${currentY}`).classList.add('searched');
-        for (const nextPosStr of neighbourGraph[currentX][currentY]) {
-            if (!cameFrom.has(nextPosStr)) {
-                frontier.push(nextPosStr);
-                cameFrom.set(nextPosStr, currentPosStr)
-            }
-        }
-        // Check goal condition
-        if (currentPosStr === `${x-1},${y-1}`) {
-            yield 'Goal found';
-            
-            while(currentPosStr !== '0,0') {
-                const [currentX, currentY] = currentPosStr.split(',').map(s => parseInt(s, 10));
-                document.getElementById(`tile-x${currentX}-y${currentY}`).classList.add('path');
-                currentPosStr = cameFrom.get(currentPosStr);
-            }
-            return 'Path found';
-        }
-        yield 'Searching...';
-    }
-    return 'No path found';
-}
+resizeMap(30, 40);

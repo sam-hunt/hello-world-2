@@ -30,13 +30,13 @@
         </section>
         <section id="solver" class="bordered">
             <h2>Solver</h2>
-            <label for="show-progress-input">Show algorithm progress</label>
+            <label for="show-progress-input">Show progress</label>
             <input type="checkbox" id="show-progress-input" name="show-progress-input" checked="checked">
             <p>Algorithm:</p>
             <input type="radio" id="algorithm-breadth-first-input" name="algorithm" value="breadth-first" checked="checked">
             <label for="breadth-first">Breadth-First Search</label>
             <br/>
-            <input type="radio" id="algorithm-dijkstra-input" name="algorithm" value="dijkstra" disabled="true">
+            <input type="radio" id="algorithm-dijkstra-input" name="algorithm" value="dijkstra">
             <label for="dijkstra">Dijkstra's Algorithm (todo)</label>
             <br/>
             <input type="radio" id="algorithm-a-star-input" name="algorithm" value="a-star" disabled="true">
@@ -49,7 +49,7 @@
         </section>
     </div>
     <div id="tilemap-root" class="bordered"></div>
-    <script type="text/javascript" src="./path-finding.js"></script>
+    <script type="module" src="./path-finding.js"></script>
 </body>
 </html>
 
