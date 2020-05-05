@@ -18,6 +18,14 @@
         <h1>Pathfinding Test</h1>
         <br/>
         <section id="grid-setup" class="bordered">
+            <ol>
+                <li>Finds a path from top-left to bottom-right.</li>
+                <li>Drag on the grid to invert tile passability.</li>
+                <li>Pick an algorithm to use, and run the pathfinder!</li>
+            </ol>
+            <p></p>
+        </section>
+        <section id="grid-setup" class="bordered">
             <h2>Grid Setup</h2>
             <label for="tilemap-x-input">Tilemap Size X:</label>
             <input id="tilemap-x-input" type="number" value="30" min="3" max="100">
@@ -25,8 +33,8 @@
             <label for="tilemap-y-input">Tilemap Size Y:</label>
             <input id="tilemap-y-input" type="number" value="40" min="3" max="100">
             <hr/>
-            <input type=button id="reset-tiles-button" value="Reset Tiles"/>
-            <input type=button id="invert-all-tiles-button" value="Invert All Tiles"/>
+            <input type="button" id="resize-grid-button" value="Clear/Resize Grid"/>
+            <input type="button" id="invert-all-tiles-button" value="Invert All Tiles"/>
         </section>
         <section id="solver" class="bordered">
             <h2>Solver</h2>
@@ -36,20 +44,21 @@
             <input type="radio" id="algorithm-breadth-first-input" name="algorithm" value="breadth-first" checked="checked">
             <label for="breadth-first">Breadth-First Search</label>
             <br/>
-            <input type="radio" id="algorithm-dijkstra-input" name="algorithm" value="dijkstra" disabled="true">
-            <label for="dijkstra">Dijkstra's Algorithm (todo)</label>
+            <input type="radio" id="algorithm-dijkstra-input" name="algorithm" value="dijkstra">
+            <label for="dijkstra">Dijkstra's Algorithm</label>
             <br/>
-            <input type="radio" id="algorithm-a-star-input" name="algorithm" value="a-star" disabled="true">
-            <label for="a-star">A* (todo)</label>
+            <input type="radio" id="algorithm-a-star-input" name="algorithm" value="a-star">
+            <label for="a-star">A*</label>
             <br/>
             <hr/>
-            <input type=button id="run-pathfinder-button" value="Run Pathfinder"/>
+            <input type="button" id="run-pathfinder-button" value="Run Pathfinder"/>
+            <input type="button" id="clear-pathing-button" value="Clear Pathing" />
             <hr/>
             <p id="algorithm-status-p">Status: Waiting for user</p>
         </section>
     </div>
     <div id="tilemap-root" class="bordered"></div>
-    <script type="text/javascript" src="./path-finding.js"></script>
+    <script type="module" src="./path-finding.js"></script>
 </body>
 </html>
 
