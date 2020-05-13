@@ -42,13 +42,6 @@ a:hover {
     color: var(--accent-color);
 }
 
-img.portrait {
-    border-radius: 50%;
-    border: 10px solid var(--accent-color);
-    width: 300px;
-    height: 300px;
-}
-
 .links .icon {
     -webkit-transition: fill 0.2s ease-out;
     -moz-transition: fill 0.2s ease-out;
@@ -60,39 +53,4 @@ img.portrait {
 
 .links img:hover, .links svg:hover {
     filter: sepia(100%) saturate(200%) brightness(80%) hue-rotate(220deg);
-}
-
-@media (min-width: 840px) {
-    main {
-        display: grid;
-        grid-template: 1fr 2fr 1fr / 2fr 3fr 5% 3fr 2fr;
-    }
-    img.portrait {
-        grid-area: 2 / 2;
-        margin: 0 auto;
-    }
-    .text-container {
-        grid-area: 2 / 4;
-        margin: 0 auto;
-    }
-}
-
-@media (max-width: 839px) {
-    main {
-        display: grid;
-        grid-template: 5% 1fr 2fr / 10% 1fr 10%;
-    }
-    img.portrait {
-        grid-area: 2 / 2;
-        margin: 0 auto;
-    }
-    .text-container {
-        grid-area: 3 / 2;
-        text-align: center;
-    }
-}
-
-#leaflet-map-root { 
-    width: auto; height: 100%;
-    background-color:rgba(255,0,0,0.0);
 }

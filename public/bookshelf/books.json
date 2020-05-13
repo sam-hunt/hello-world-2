@@ -1,0 +1,197 @@
+[{
+    "title": "Clean Code",
+    "author": "Robert C. Martin",
+    "subtitle": "A Handbook of Agile Software Craftsmanship"
+},{
+    "title": "Clean Architecture",
+    "author": "Robert C. Martin",
+    "subtitle": "A Craftsman's Guide to Software Structure and Design"
+},{
+    "title": "Design Patterns",
+    "author": "The Gang of Four",
+    "subtitle": "Elements of Reusable Object-Oriented Software"
+},{
+    "title": "Refactoring",
+    "author": "Martin Fowler",
+    "subtitle": "Improving the Design of Existing Code"
+},{
+    "title": "The Pragmatic Programmer",
+    "author": "Andrew Hunt, David Thomas",
+    "subtitle": "From Journeyman to Master (1st Edition)"
+},{
+    "title": "Deep Learning",
+    "author": "Goodfellow, Bengio, Courville",
+    "subtitle": "Adaptive Computation and Machine Learning Series"
+},{
+    "title": "The Mythical Man Month",
+    "author": "Fred Brooks",
+    "subtitle": "Essays on Software Engineering, Anniversary Edition"
+},{
+    "title": "Domain-Driven Design Distilled",
+    "author": "Vaughn Vernon",
+    "subtitle": "1st Edition"
+},{
+    "title": "Designing Data-Intensive Applications",
+    "author": "Martin Kleppmann",
+    "subtitle": "The Big Ideas behind Reliable, Scalable, and Maintainable Systems"
+},{
+    "title": "Building Microservices",
+    "author": "Sam Newman",
+    "subtitle": "Designing Fine-Grained Systems"
+},{
+    "title": "Graph Databases",
+    "author": "Robinson, Webber, Eifrem",
+    "subtitle": "New Opportunities for Connected Data (2nd Edition)"  
+},{
+    "title": "The Society of Mind",
+    "author": "Marvin Minsky",
+    "subtitle": ""
+},{
+    "title": "Interactive Computer Graphics",
+    "author": "Edward Angel and Dave Shreiner",
+    "subtitle": "A Top-Down Approach with WebGL (7th Edition)"
+},{
+    "title": "Machine Learning",
+    "author": "Stephen Marsland",
+    "subtitle": "An Algorithmic Perspective (2nd Edition)"
+},{
+    "title": "NoSQL Distilled",
+    "author": "P. J. Sadalagen M. Fowler",
+    "subtitle": "A Brief Guide to the Emerging World of Polyglot Persistence"
+},{
+    "title": "Algorithms + Data Structures = Programs",
+    "author": "Niklaus Wirth",
+    "subtitle": "(Prentice-Hall Series in Automatic Computation)"
+},{
+    "title": "Happy City",
+    "author": "Charles Montgomery",
+    "subtitle": "Transforming Our Lives Through Urban Design"
+},{
+    "title": "Flow",
+    "author": "Mihaly Csikszentmihalyi",
+    "subtitle": "The Psychology of Optimal Experience"
+},{
+    "title": "Superintelligence",
+    "author": "Nick Bostrom",
+    "subtitle": "Paths, Dangers, Strategies"
+},{
+    "title": "Game Engine Architecture",
+    "author": "Jason Gregory",
+    "subtitle": "Second Edition"
+},{
+    "title": "Nonviolent Communication",
+    "author": "Marshall B. Rosenberg",
+    "subtitle": "A Language of Life: Life-Changing Tools for Healthy Relationships"
+},{
+    "title": "Game Programming Patterns",
+    "author": "Robert Nystrom",
+    "subtitle": "1st Edition"
+},{
+    "title": "Beginning C++ Through Game Programming",
+    "author": "Michael Dawson",
+    "subtitle": "Fourth Edition"
+},{
+    "title": "Artificial Intelligence",
+    "author": "E. Rich, K. Knight, et al.",
+    "subtitle": "International Edition"
+},{
+    "title": "The C++ Programming Language",
+    "author": "Bjarne Stroustrup",
+    "subtitle": "Fourth Edition"
+},{
+    "title": "C++ In One Hour a Day",
+    "author": "Siddhartha Rao",
+    "subtitle": "Sam's Teach Yourself"
+},{
+    "title": "Peopleware",
+    "author": "T. DeMarco, T. Lister",
+    "subtitle": "Productive Projects and Teams, Second Edition"
+},{
+    "title": "Designing Creatures and Characters",
+    "author": "Marc Taro Holmes",
+    "subtitle": "How to Build an Artist's Portfolio for Video Games, Film, Animation and More"
+},{
+    "title": "Being Mortal",
+    "author": "Atul Gawande",
+    "subtitle": "Medicine and What Matters in the End"
+},{
+    "title": "Unity From Zero to Proficiency (Foundations)",
+    "author": "Patrick Felicia",
+    "subtitle": "A step-by-step guide to creating your first game with Unity"
+},{
+    "title": "Refuse to Choose!",
+    "author": "Barbara Sher",
+    "subtitle": "Use All of Your Interests, Passions, and Hobbies to Create the Life and Career of Your Dreams"
+},{
+    "title": "Extreme Programming Explained",
+    "author": "Kent Beck",
+    "subtitle": "Embrace Change, 2nd Edition"
+},{
+    "title": "Effective C++",
+    "author": "Scott Meyers",
+    "subtitle": "55 Specific Ways to Improve Your Programs and Designs"
+},{
+    "title": "Effective STL",
+    "author": "Scott Meyers",
+    "subtitle": "50 Specific Ways to Improve Your Use of the Standard Template Library"
+},{
+    "title": "Multiplayer Game Programming",
+    "author": "J. Glazer, S. Madhav",
+    "subtitle": "Architecting Networked Games (Game Design)"
+},{
+    "title": "Designing Games",
+    "author": "Tynan Sylvester",
+    "subtitle": "A Guide to Engineering Experiences, 1st Edition"
+},{
+    "title": "1984",
+    "author": "George Orwell",
+    "subtitle": ""
+},{
+    "title": "Dune",
+    "author": "Frank Herbert",
+    "subtitle": ""
+},{
+    "title": "Time Is The Simplest Thing",
+    "author": "Clifford D. Simak",
+    "subtitle": ""
+},{
+    "title": "Animal Farm",
+    "author": "George Orwell",
+    "subtitle": ""
+},{
+    "title": "Creating the Art of the Game",
+    "author": "Matthew Omernick",
+    "subtitle": "1st Edition"
+},{
+    "title": "3d Game Engine Design and Architecture",
+    "author": "Allen Sherrod",
+    "subtitle": "Charles River Media Game Development"
+},{
+    "title": "Ultimate Game Design",
+    "author": "Tom Meigs",
+    "subtitle": "Building Game Worlds"
+},{
+    "title": "Java Programming",
+    "author": "M. Watson, Sybex",
+    "subtitle": "10-Minute Solutions"
+},{
+    "title": "Sam's Teach Yourself PHP in 24 hours",
+    "author": "Matt Zandstra",
+    "subtitle": "3rd Edition"
+},{
+    "title": "Red Hat Linux 7 Unleashed",
+    "author": "B. Ball, D. Pitts",
+    "subtitle": "From Knowledge to Mastery"
+},{
+    "title": "Beginning MySQL Database Design and Optimization",
+    "author": "Chad Russel",
+    "subtitle": "From Novice to Professional"
+},{
+    "title": "Absolute Beginner's Guide to Building Robots",
+    "author": "Gareth Branwyn",
+    "subtitle": "No prior robot building experience necessary"
+},{
+    "title": "Data Structures and Algorithms in Java",
+    "author": "Robert Lafore",
+    "subtitle": "2nd Edition"
+}]

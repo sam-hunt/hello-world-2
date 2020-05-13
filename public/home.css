@@ -1,0 +1,36 @@
+img.portrait {
+    border-radius: 50%;
+    border: 10px solid var(--accent-color);
+    width: 300px;
+    height: 300px;
+}
+
+@media (min-width: 840px) {
+    main {
+        display: grid;
+        grid-template: 1fr 2fr 1fr / 2fr 3fr 5% 3fr 2fr;
+    }
+    img.portrait {
+        grid-area: 2 / 2;
+        margin: 0 auto;
+    }
+    .text-container {
+        grid-area: 2 / 4;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 839px) {
+    main {
+        display: grid;
+        grid-template: 5% 1fr 2fr / 10% 1fr 10%;
+    }
+    img.portrait {
+        grid-area: 2 / 2;
+        margin: 0 auto;
+    }
+    .text-container {
+        grid-area: 3 / 2;
+        text-align: center;
+    }
+}
