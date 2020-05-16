@@ -6,7 +6,7 @@
     <title>Repeaters</title>
 
     <link rel='stylesheet' type='text/css' media='screen' href='../styles.css'>
-    <link rel='stylesheet' type='text/css' media='screen' href='../rimworld.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='./rimworld.css'>
     
     <!-- Leaflet -->
     <link rel="stylesheet" href="../lib/leaflet-1.6.0.css"/>
@@ -21,17 +21,23 @@
         </svg>
     </a>
     <script>
-        var map = L.map('leaflet-map-root', {
+        const urlParams = new URLSearchParams(window.location.search);
+        const colony = urlParams.get('colony');
+        const x = parseFloat(urlParams.get('x')) || 0;
+        const y = parseFloat(urlParams.get('y')) || 0;
+        const z = parseFloat(urlParams.get('z')) || 1; // Zoom
+
+        const map = L.map('leaflet-map-root', {
             crs: L.CRS.Simple,
             minZoom: 1,
             zoom: 3,
         });
 
-        var tileLayer = L.tileLayer('./tiles/{z}/{x}/{y}.png', {
+        const tileLayer = L.tileLayer(`./${colony}/{z}/{x}/{y}.png`, {
             maxZoom: 6,
         }).addTo(map);
 
-        map.setView([-97, 37], 6);
+        map.setView([x, y], z);
     </script>
 </body>
 </html>
