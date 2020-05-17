@@ -21,23 +21,31 @@
         </svg>
     </a>
     <script>
+        // Parse colony selection from URL query string
         const urlParams = new URLSearchParams(window.location.search);
         const colony = urlParams.get('colony');
-        const x = parseFloat(urlParams.get('x')) || 0;
-        const y = parseFloat(urlParams.get('y')) || 0;
-        const z = parseFloat(urlParams.get('z')) || 1; // Zoom
 
+        // Redirect to default colony and focus if none was specified
+        if (!colony) window.location.search = 'colony=ashmarines&x=-40&y=84&z=6';
+
+        // Initialise leaflet map elements
         const map = L.map('leaflet-map-root', {
             crs: L.CRS.Simple,
             minZoom: 1,
             zoom: 3,
         });
 
+        // Set the leaflet tiles path, switching the root folder based on the colony name
         const tileLayer = L.tileLayer(`./${colony}/{z}/{x}/{y}.webp`, {
             maxZoom: 6,
         }).addTo(map);
 
+        // Set the initially focused area and zoom
+        const x = parseFloat(urlParams.get('x')) || 0;
+        const y = parseFloat(urlParams.get('y')) || 0;
+        const z = parseFloat(urlParams.get('z')) || 1; // Zoom
         map.setView([x, y], z);
+
     </script>
 </body>
 </html>
