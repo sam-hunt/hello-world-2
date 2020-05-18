@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Sam Hunt Dev</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='../../styles.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='./bookshelf.css'>
+    <meta name="Description" content="Sam Hunt's Bookshelf">
+</head>
+<body>
+    <a id="back-button" onclick="window.history.back()"><svg style="left: 10px; top: 10px; width:32px; height:32px; position: fixed"
+        viewBox="0 0 24 24">
+        <path stroke="black" d="M19,7V11H5.83L9.41,7.41L8,6L2,12L8,18L9.41,16.58L5.83,13H21V7H19Z" stroke-width="3" />
+        <path stroke="white" d="M19,7V11H5.83L9.41,7.41L8,6L2,12L8,18L9.41,16.58L5.83,13H21V7H19Z" fill="white" />
+    </svg></a>
+    <h1>My Bookshelf.</h1>
+    <p>A slice of my Personal Book Collection. I enjoy reading mostly science fiction and non-fiction. 😃</p>
+    <main></main>
+    <script>
+        const main = document.getElementsByTagName('main')[0];
+        window.onload = () => fetch('books.json')
+            .then(response => response.json())
+            .then(books => books.forEach(book => {
+                // TODO: Add more elements e.g. for hover-over title/subtitle/author details etc.
+                const [image] = ['img'].map(el => document.createElement(el));
+                image.src = `./book-covers/${book.title.toLowerCase().replace(/ /g, '-').replace(/[^\w\+-]+/g, '')}.jpg`;
+                image.alt = book.title;
+                main.appendChild(image);
+            }));
+    </script>
+</body>
+</html>

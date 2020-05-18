@@ -5,6 +5,11 @@ img.portrait {
     height: 300px;
 }
 
+h2, #cool-stuff-link {
+    margin-bottom: 20px;
+    text-decoration: none;
+}
+
 @media (min-width: 840px) {
     main {
         display: grid;

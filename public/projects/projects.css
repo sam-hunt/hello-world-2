@@ -1,0 +1,30 @@
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+h1 {
+    padding: 20px;;
+    font-size: 56pt;
+    text-align: center;
+    width: 98%;
+    max-width: 90%;
+}
+
+main {
+    height: initial;
+}
+
+img {
+    margin: 20px;
+    background-color: grey;
+    height: 300px;
+    width: 400px;
+    object-fit: cover;
+}
+
+@media (max-width: 640px) {
+    h1 {
+        font-size: 30pt;
+    }
+}
