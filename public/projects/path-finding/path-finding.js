@@ -372,7 +372,7 @@ async function* aStar() {
 
             if (!costSoFar.has(nextXY) || newCost < costSoFar.get(nextXY)) {
                 costSoFar.set(nextXY, newCost);
-                const priority = newCost + heuristic(currentX, currentY, goalX, goalY, 1, SQUARE_ROOT_OF_TWO);
+                const priority = newCost + heuristic(nextX, nextY, goalX, goalY, 1, SQUARE_ROOT_OF_TWO);
                 frontier.push([nextX, nextY, priority]);
                 cameFrom.set(nextXY, [currentX, currentY, newCost])
             }
