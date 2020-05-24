@@ -15,11 +15,37 @@ main {
     height: initial;
 }
 
-img {
+.project-panel {
     margin: 20px;
-    background-color: grey;
     height: 300px;
     width: 400px;
+    display: inline-block;
+    position: relative;
+}
+
+.project-overlay {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--bg-color);
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    position: absolute;
+    text-align: center;
+    transition: opacity .5s;
+}
+.project-overlay:hover {
+    opacity: 90%;
+    transition: opacity .5s;
+}
+
+img {
+    height: 100%;
+    width: 100%;
+    background-color: darkslateblue;
     object-fit: cover;
 }
 
