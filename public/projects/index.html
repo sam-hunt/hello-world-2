@@ -19,7 +19,8 @@
     <h1>Some Cool Stuff.</h1>
     <main>
         <div class="project-panel bordered">
-            <img src="./school-viewer-thumb.png" alt="overlay" />
+            <!-- thumb img prefixed with _ to prevent nginx subpath redirecting to the actual school-viewer app in prod -->
+            <img src="./_school-viewer-thumb.png" alt="overlay" />
             <div class="project-overlay">
                 <h2><a href="./school-viewer" title="School Viewer" aria-label="School Viewer">School Viewer</a></h2>
                 <p>NZ Schools Directory API Visualiser with 
