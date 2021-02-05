@@ -54,3 +54,10 @@ a:hover {
 .links img:hover, .links svg:hover {
     filter: sepia(100%) saturate(200%) brightness(80%) hue-rotate(220deg);
 }
+
+.bordered {
+    border-width: 1px;
+    border-radius: 10px;
+    border-style: groove;
+    border-color: whitesmoke;
+}

@@ -56,13 +56,6 @@ section#solver input {
     margin-right: 10%;;
 }
 
-.bordered {
-    border-width: 1px;
-    border-radius: 10px;
-    border-style: groove;
-    border-color: whitesmoke;
-}
-
 #tilemap-root {
     display: grid;
     padding: 10px;
